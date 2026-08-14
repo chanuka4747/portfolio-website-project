@@ -8,59 +8,6 @@
 /* ----------------------------------------------------------------
    PROJECT DATA — Edit this object to update modal content
    ---------------------------------------------------------------- */
-const PROJECTS = [
-  {
-    title:    'Personal Portfolio Website',
-    category: 'Web',
-    image:    'assets/images/project-01.jpg',
-    imageAlt: 'Personal Portfolio Website screenshot',
-    desc:     'A modern and responsive personal portfolio website created to present education, technical skills, projects, experience, CV, and contact information through an accessible and user-friendly interface.',
-    tech:     ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web Design'],
-    features: [
-      'Light and dark theme support',
-      'Responsive navigation with hamburger menu',
-      'Animated sections using IntersectionObserver',
-      'Project filtering by category',
-      'Accessible contact form with validation',
-      'Downloadable CV feature',
-    ],
-    github:   null,  // no URL — button hidden
-    demo:     null,  // no URL — button hidden
-  },
-  {
-    title:    'IoT Mobile-Controlled Smart Car',
-    category: 'IoT',
-    image:    'assets/images/project-02.jpg',
-    imageAlt: 'IoT Mobile-Controlled Smart Car photo',
-    desc:     'An academic IoT project that demonstrates remote movement control of a smart car through a mobile device and a microcontroller-based control system.',
-    tech:     ['Arduino', 'Embedded Programming', 'Bluetooth Communication', 'Mobile Control'],
-    features: [
-      'Forward and backward movement control',
-      'Left and right steering',
-      'Remote mobile device control',
-      'Real-time command response',
-      'Stop control function',
-    ],
-    github: null,
-    demo:   null,
-  },
-  {
-    title:    'Road Traffic Handling Application',
-    category: 'Application',
-    image:    'assets/images/project-03.jpg',
-    imageAlt: 'Road Traffic Handling Application screenshot',
-    desc:     'An academic application concept designed to support better road-traffic handling by organizing traffic-related information and presenting it through a clear, user-friendly interface.',
-    tech:     ['Java', 'Android Studio', 'SQL', 'UI Design'],
-    features: [
-      'Traffic-information management',
-      'User-friendly mobile interface',
-      'Structured data handling',
-      'Simple traffic-status presentation',
-    ],
-    github: null,
-    demo:   null,
-  },
-];
 
 /* ================================================================
    PARTICLE CANVAS BACKGROUND
