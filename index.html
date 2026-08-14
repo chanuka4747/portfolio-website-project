@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta -->
+  <title>Chanuka Dilshan | UI/UX &amp; Software Engineering Portfolio</title>
+  <meta name="description" content="Personal portfolio of Chanuka Dilshan — BICT Undergraduate at the University of Vavuniya, aspiring UI/UX Designer and Software Engineer from Sri Lanka." />
+  <meta name="author" content="Chanuka Dilshan" />
+  <meta name="keywords" content="Chanuka Dilshan, Portfolio, UI/UX Designer, Software Engineer, BICT, University of Vavuniya, Sri Lanka, Web Development" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Chanuka Dilshan | UI/UX &amp; Software Engineering Portfolio" />
+  <meta property="og:description" content="BICT Undergraduate at the University of Vavuniya, aspiring UI/UX Designer and Software Engineer from Sri Lanka." />
+  <meta property="og:image" content="assets/images/profile.jpg" />
+  <meta property="og:url" content="" />
+
+  <!-- Favicon (SVG inline data-URI so no extra file needed) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230284C7'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold' font-size='28' fill='white'%3ECD%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plh7eqjqGFGcb9Cb/dxFNDilj15pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dark-theme" data-theme="dark">
+
+  <!-- ============================================================
+       CANVAS BACKGROUND
+  ============================================================ -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+  ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Chanuka Dilshan — go to top">
+        <div class="logo-mark" aria-hidden="true">CD</div>
+        <span class="logo-name">Chanuka Dilshan</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="#home"    class="nav-link active" data-section="home"><i class="fas fa-house" aria-hidden="true"></i> Home</a></li>
+          <li><a href="#about"   class="nav-link" data-section="about"><i class="fas fa-user" aria-hidden="true"></i> About</a></li>
+          <li><a href="#education" class="nav-link" data-section="education"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</a></li>
+          <li><a href="#skills"  class="nav-link" data-section="skills"><i class="fas fa-code" aria-hidden="true"></i> Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects"><i class="fas fa-diagram-project" aria-hidden="true"></i> Projects</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience"><i class="fas fa-briefcase" aria-hidden="true"></i> Experience</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon" aria-hidden="true"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="home" aria-label="Hero — introduction">
+    <div class="container hero-container">
+
+      <!-- Left: Text Content -->
+      <div class="hero-content" data-reveal>
+        <span class="hero-label"><i class="fas fa-star" aria-hidden="true"></i> Welcome to My Portfolio</span>
+
+        <h1 class="hero-heading">
+          Hi, I'm <span class="highlight">Chanuka Dilshan</span>
+        </h1>
+
+        <div class="hero-role" aria-live="polite" aria-atomic="true">
+          <span class="role-prefix">I am a </span>
+          <span class="typed-text" id="typedText" aria-label="rotating role titles"></span>
+          <span class="cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-intro">
+          Hello! I'm Chanuka Dilshan, a Bachelor of Information and Communication Technology undergraduate at the University of Vavuniya. I am passionate about software development, UI/UX design, problem-solving, and emerging technologies. My goal is to become a skilled Software Engineer and create innovative, accessible, and user-friendly digital solutions that make a positive impact.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-envelope" aria-hidden="true"></i> Contact Me
+          </a>
+          <a href="assets/cv/Chanuka-Dilshan-CV.pdf" download="Chanuka-Dilshan-CV.pdf" class="btn btn-secondary">
+            <i class="fas fa-download" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/chanuka-dilshan-39086b429/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Chanuka Dilshan on LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Photo -->
+      <div class="hero-visual" data-reveal data-reveal-delay="200">
+        <div class="profile-frame">
+          <div class="profile-ring" aria-hidden="true"></div>
+          <div class="profile-img-wrap">
+            <img
+              src="assets/images/profile.jpg"
+              alt="Chanuka Dilshan — profile photo"
+              class="profile-img"
+              loading="eager"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'300\'%3E%3Crect width=\'300\' height=\'300\' fill=\'%231C2541\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'80\' fill=\'%2338BDF8\'%3ECD%3C/text%3E%3C/svg%3E'"
+            />
+          </div>
+          <!-- Decorative elements -->
+          <div class="deco deco-1" aria-hidden="true"><i class="fas fa-code"></i></div>
+          <div class="deco deco-2" aria-hidden="true"><i class="fas fa-palette"></i></div>
+          <div class="deco deco-3" aria-hidden="true"><i class="fas fa-microchip"></i></div>
+          <div class="deco deco-4" aria-hidden="true"><i class="fas fa-database"></i></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+      <span class="scroll-dot" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section class="section about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="section-label">Get To Know</span>
+        <h2 class="section-title" id="about-heading">About Me</h2>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- About text -->
+        <div class="about-text" data-reveal>
+          <p>
+            I'm Chanuka Dilshan, a Bachelor of Information and Communication Technology undergraduate at the University of Vavuniya. I have a strong interest in software development, UI/UX design, web technologies, programming, and problem-solving. I enjoy exploring new technologies and applying my knowledge to create practical, accessible, and user-friendly digital solutions. My career goal is to become a professional Software Engineer, contribute to innovative projects, and continuously develop my technical, creative, and professional skills.
+          </p>
+
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <div>
+                <span class="detail-label">Name</span>
+                <span class="detail-value">Chanuka Dilshan</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-birthday-cake" aria-hidden="true"></i>
+              <div>
+                <span class="detail-label">Age</span>
+                <span class="detail-value">24</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <div>
+                <span class="detail-label">Country</span>
+                <span class="detail-value">Sri Lanka</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              <div>
+                <span class="detail-label">Study</span>
+                <span class="detail-value">BICT, University of Vavuniya</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="assets/cv/Chanuka-Dilshan-CV.pdf" download="Chanuka-Dilshan-CV.pdf" class="btn btn-primary">
+            <i class="fas fa-download" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+
+        <!-- Statistics -->
+        <div class="about-stats" data-reveal data-reveal-delay="150">
+          <div class="stat-card" data-stat>
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-diagram-project"></i></div>
+            <div class="stat-number" data-target="3" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card" data-stat>
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+            <div class="stat-number" data-target="8" data-suffix="+">0</div>
+            <div class="stat-label">Technical Skills</div>
+          </div>
+          <div class="stat-card" data-stat>
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
+            <div class="stat-number" data-target="4" data-suffix="+">0</div>
+            <div class="stat-label">Programming Technologies</div>
+          </div>
+          <div class="stat-card" data-stat>
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-fire"></i></div>
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Passion for Learning</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDUCATION SECTION
+  ============================================================ -->
+  <section class="section education" id="education" aria-labelledby="education-heading">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="section-label">My Academic Path</span>
+        <h2 class="section-title" id="education-heading">Education</h2>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <!-- Education 01 -->
+        <article class="timeline-item" role="listitem" data-reveal>
+          <div class="timeline-marker" aria-hidden="true">
+            <div class="marker-icon"><i class="fas fa-university"></i></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-duration"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 2022 – 2028</span>
+              <span class="timeline-badge current">Current</span>
+            </div>
+            <h3 class="timeline-title">Bachelor of Information and Communication Technology</h3>
+            <p class="timeline-institution"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> University of Vavuniya</p>
+            <p class="timeline-desc">
+              Currently developing knowledge and practical skills in programming, database management, software development, web technologies, user-interface design, and information systems through coursework and academic projects.
+            </p>
+          </div>
+        </article>
+
+        <!-- Education 02 -->
+        <article class="timeline-item" role="listitem" data-reveal data-reveal-delay="150">
+          <div class="timeline-marker" aria-hidden="true">
+            <div class="marker-icon"><i class="fas fa-school"></i></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-badge completed">Completed</span>
+            </div>
+            <h3 class="timeline-title">G.C.E. Ordinary Level — 9 A Passes</h3>
+            <p class="timeline-institution"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Mahasen National School, Mahawa</p>
+            <p class="timeline-desc">
+              Successfully completed the G.C.E. Ordinary Level examination with nine A passes, demonstrating strong academic performance and a solid foundation for further studies.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+  ============================================================ -->
+  <section class="section skills" id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="section-label">What I Can Do</span>
+        <h2 class="section-title" id="skills-heading">Skills</h2>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <p class="skills-note" data-reveal>The percentages below are visual indicators of relative proficiency and do not represent official certifications.</p>
+
+      <div class="skills-grid">
+
+        <!-- Skill bars -->
+        <div class="skills-bars" data-reveal>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fab fa-html5" aria-hidden="true"></i> HTML &amp; CSS</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML and CSS proficiency 85%">
+              <div class="progress-bar" data-width="85"></div>
+              <span class="progress-pct">85%</span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fab fa-js-square" aria-hidden="true"></i> JavaScript</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 70%">
+              <div class="progress-bar" data-width="70"></div>
+              <span class="progress-pct">70%</span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fab fa-java" aria-hidden="true"></i> Java Programming</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Java Programming proficiency 68%">
+              <div class="progress-bar" data-width="68"></div>
+              <span class="progress-pct">68%</span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fas fa-hashtag" aria-hidden="true"></i> C# Programming</span>
+              <span class="skill-level">Basic</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="C# Programming proficiency 50%">
+              <div class="progress-bar" data-width="50"></div>
+              <span class="progress-pct">50%</span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fas fa-database" aria-hidden="true"></i> SQL &amp; Database Management</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="SQL and Database Management proficiency 65%">
+              <div class="progress-bar" data-width="65"></div>
+              <span class="progress-pct">65%</span>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name"><i class="fab fa-git-alt" aria-hidden="true"></i> Git &amp; GitHub</span>
+              <span class="skill-level">Basic</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="Git and GitHub proficiency 55%">
+              <div class="progress-bar" data-width="55"></div>
+              <span class="progress-pct">55%</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tools & Technologies -->
+        <div class="skills-tools" data-reveal data-reveal-delay="150">
+          <h3 class="tools-heading">Tools &amp; Technologies</h3>
+          <div class="tools-grid">
+            <span class="tool-badge"><i class="fab fa-github" aria-hidden="true"></i> GitHub</span>
+            <span class="tool-badge"><i class="fas fa-code" aria-hidden="true"></i> VS Code</span>
+            <span class="tool-badge"><i class="fab fa-android" aria-hidden="true"></i> Android Studio</span>
+            <span class="tool-badge"><i class="fas fa-microchip" aria-hidden="true"></i> Arduino</span>
+            <span class="tool-badge"><i class="fas fa-database" aria-hidden="true"></i> MySQL</span>
+            <span class="tool-badge"><i class="fas fa-mobile-alt" aria-hidden="true"></i> Responsive Web Design</span>
+            <span class="tool-badge"><i class="fas fa-paint-brush" aria-hidden="true"></i> UI/UX Fundamentals</span>
+            <span class="tool-badge"><i class="fas fa-server" aria-hidden="true"></i> Database Management</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section class="section projects" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="section-label">My Work</span>
+        <h2 class="section-title" id="projects-heading">Projects</h2>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters" role="group" aria-label="Filter projects by category" data-reveal>
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter-btn" data-filter="application" aria-pressed="false">Application</button>
+        <button class="filter-btn" data-filter="iot" aria-pressed="false">IoT</button>
+      </div>
+
+      <!-- Project Grid -->
+      <div class="project-grid" id="projectGrid">
+
+        <!-- Project 01 -->
+        <article class="project-card" data-category="web" data-reveal>
+          <div class="project-img-wrap">
+            <img
+              src="assets/images/project-01.jpg"
+              alt="Personal Portfolio Website — a responsive web portfolio"
+              class="project-img"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'220\'%3E%3Crect width=\'400\' height=\'220\' fill=\'%231C2541\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'18\' fill=\'%2338BDF8\'%3EPersonal Portfolio Website%3C/text%3E%3C/svg%3E'"
+            />
+            <span class="project-category-badge">Web</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <p class="project-desc">A modern and responsive personal portfolio website created to present education, technical skills, projects, experience, CV, and contact information through an accessible and user-friendly interface.</p>
+            <div class="project-tech">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Responsive Design</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button
+              class="btn btn-outline view-details-btn"
+              data-project="0"
+              aria-haspopup="dialog"
+              aria-label="View details of Personal Portfolio Website"
+            >
+              <i class="fas fa-eye" aria-hidden="true"></i> View Details
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 02 -->
+        <article class="project-card" data-category="iot" data-reveal data-reveal-delay="100">
+          <div class="project-img-wrap">
+            <img
+              src="assets/images/project-02.jpg"
+              alt="IoT Mobile-Controlled Smart Car — academic IoT project"
+              class="project-img"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'220\'%3E%3Crect width=\'400\' height=\'220\' fill=\'%231C2541\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'18\' fill=\'%2338BDF8\'%3EIoT Smart Car%3C/text%3E%3C/svg%3E'"
+            />
+            <span class="project-category-badge">IoT</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">IoT Mobile-Controlled Smart Car</h3>
+            <p class="project-desc">An academic IoT project that demonstrates remote movement control of a smart car through a mobile device and a microcontroller-based control system.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Arduino</span>
+              <span class="tech-badge">Embedded Programming</span>
+              <span class="tech-badge">Bluetooth</span>
+              <span class="tech-badge">Mobile Control</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button
+              class="btn btn-outline view-details-btn"
+              data-project="1"
+              aria-haspopup="dialog"
+              aria-label="View details of IoT Mobile-Controlled Smart Car"
+            >
+              <i class="fas fa-eye" aria-hidden="true"></i> View Details
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 03 -->
+        <article class="project-card" data-category="application" data-reveal data-reveal-delay="200">
+          <div class="project-img-wrap">
+            <img
+              src="assets/images/project-03.jpg"
+              alt="Road Traffic Handling Application — academic mobile app"
+              class="project-img"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'220\'%3E%3Crect width=\'400\' height=\'220\' fill=\'%231C2541\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'16\' fill=\'%2338BDF8\'%3ERoad Traffic Application%3C/text%3E%3C/svg%3E'"
+            />
+            <span class="project-category-badge">Application</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Road Traffic Handling Application</h3>
+            <p class="project-desc">An academic application concept designed to support better road-traffic handling by organizing traffic-related information and presenting it through a clear, user-friendly interface.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Java</span>
+              <span class="tech-badge">Android Studio</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">UI Design</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button
+              class="btn btn-outline view-details-btn"
+              data-project="2"
+              aria-haspopup="dialog"
+              aria-label="View details of Road Traffic Handling Application"
+            >
+              <i class="fas fa-eye" aria-hidden="true"></i> View Details
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECT MODAL
+  ============================================================ -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose" aria-label="Close project details">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <div class="modal-content" id="modalContent">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       EXPERIENCE SECTION
+  ============================================================ -->
+  <section class="section experience" id="experience" aria-labelledby="experience-heading">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="section-label">Academic &amp; Personal</span>
+        <h2 class="section-title" id="experience-heading">Experience</h2>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <p class="experience-note" data-reveal>
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        The following are academic and personal project experiences, not official employment.
+      </p>
+
+      <div class="experience-grid">
+
+        <!-- Experience 01 -->
+        <article class="experience-card" data-reveal>
+          <div class="exp-icon" aria-hidden="true"><i class="fas fa-globe"></i></div>
+          <div class="exp-body">
+            <div class="exp-meta">
+              <span class="exp-duration"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 2022 – Present</span>
+            </div>
+            <h3 class="exp-title">Academic Web Development Project Contributor</h3>
+            <p class="exp-org"><i class="fas fa-university" aria-hidden="true"></i> University of Vavuniya</p>
+            <p class="exp-desc">
+              Designed and developed responsive web interfaces, created user-friendly layouts, tested website functionality, corrected basic errors, and completed assigned academic web-development projects.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">HTML</span>
+              <span class="exp-tag">CSS</span>
+              <span class="exp-tag">JavaScript</span>
+              <span class="exp-tag">Responsive Web Design</span>
+              <span class="exp-tag">GitHub</span>
+              <span class="exp-tag">Problem-Solving</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Experience 02 -->
+        <article class="experience-card" data-reveal data-reveal-delay="150">
+          <div class="exp-icon" aria-hidden="true"><i class="fas fa-laptop-code"></i></div>
+          <div class="exp-body">
+            <div class="exp-meta">
+              <span class="exp-duration"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 2022 – Present</span>
+            </div>
+            <h3 class="exp-title">Software Development Project Contributor</h3>
+            <p class="exp-org"><i class="fas fa-briefcase" aria-hidden="true"></i> Personal &amp; University Projects</p>
+            <p class="exp-desc">
+              Developed small software applications, applied object-oriented programming concepts, worked with databases, tested programs, documented project work, and collaborated with other students on academic group projects.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">Java</span>
+              <span class="exp-tag">C#</span>
+              <span class="exp-tag">SQL</span>
+              <span class="exp-tag">Git</span>
+              <span class="exp-tag">GitHub</span>
+              <span class="exp-tag">Teamwork</span>
+              <span class="exp-tag">Communication</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section class="section contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <span class="section-label">Let's Connect</span>
+        <h2 class="section-title" id="contact-heading">Contact</h2>
+        <div class="section-divider" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info" data-reveal>
+          <h3 class="contact-subtitle">Get in Touch</h3>
+          <p class="contact-intro">I'm currently open to internship opportunities and academic collaborations. Feel free to reach out!</p>
+
+          <ul class="contact-list" role="list">
+            <li class="contact-list-item">
+              <div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:chanukad513@gmail.com" class="contact-value">chanukad513@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-list-item">
+              <div class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+94773260923" class="contact-value">+94 77 326 0923</a>
+              </div>
+            </li>
+            <li class="contact-list-item">
+              <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Sri Lanka</span>
+              </div>
+            </li>
+            <li class="contact-list-item">
+              <div class="contact-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/chanuka-dilshan-39086b429/" target="_blank" rel="noopener noreferrer" class="contact-value">chanuka-dilshan</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap" data-reveal data-reveal-delay="150">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+
+            <div class="form-group">
+              <label for="name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required aria-required="true" />
+              <span class="field-error" id="name-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required aria-required="true" />
+              <span class="field-error" id="email-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject <span aria-hidden="true">*</span></label>
+              <input type="text" id="subject" name="subject" placeholder="Subject of your message" required aria-required="true" />
+              <span class="field-error" id="subject-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here…" required aria-required="true"></textarea>
+              <span class="field-error" id="message-error" role="alert" aria-live="assertive"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+            </button>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+
+    <!-- Animated Wave -->
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="var(--footer-bg)" />
+      </svg>
+    </div>
+
+    <div class="container footer-container">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo" aria-label="Chanuka Dilshan — back to top">
+          <div class="logo-mark" aria-hidden="true">CD</div>
+          <span class="logo-name">Chanuka Dilshan</span>
+        </a>
+        <p class="footer-desc">
+          BICT Undergraduate, UI/UX enthusiast, and aspiring Software Engineer focused on creating practical and user-friendly digital solutions.
+        </p>
+        <div class="footer-availability">
+          <span class="avail-dot" aria-hidden="true"></span>
+          <span>Available for Internships &amp; Academic Collaborations</span>
+        </div>
+      </div>
+
+      <!-- Footer Nav -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Footer Socials -->
+      <div class="footer-socials">
+        <h4>Connect</h4>
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/chanuka-dilshan-39086b429/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn profile">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:chanukad513@gmail.com" class="footer-social-btn" aria-label="Send email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Designed &amp; Developed by <strong>Chanuka Dilshan</strong></p>
+      <p>&copy; 2026 Chanuka Dilshan. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
